@@ -1,17 +1,18 @@
-package com.huangjinlong.A3.B5.C1;
+package com.huangjinlong.A3.B5.C1.D1;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-/**
- * Created by huang on 2018-05-25-0025.
- */
 public class Main {
 
     public static void main(String[] a) {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(Config.class);
 
-        A1 a1 = applicationContext.getBean(A1.class);
-        //System.out.println(a1.getX());
+        Bean2 bean2 = applicationContext.getBean(Bean2.class);
+        System.out.println(bean2.getY());
+        System.out.println(bean2.getPai2());
+
+        Bean1 bean1 = applicationContext.getBean(Bean1.class);
+        System.out.println(bean1.getY());
     }
 }

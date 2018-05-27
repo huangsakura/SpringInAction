@@ -29,6 +29,8 @@ public class Config {
     private String time;
     @Value("#{systemProperties['huang.x']}")
     private String t_x1;
+    //@Value("#{systemProperties}")
+    private String t_x2;
 
     @Bean
     public A1 a1() {
