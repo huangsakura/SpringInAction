@@ -17,4 +17,9 @@ public class Bean1 {
     public void c() {
         System.out.println("表演中");
     }
+
+
+    public void d(int a) {
+        System.out.println("d方法"+a);
+    }
 }

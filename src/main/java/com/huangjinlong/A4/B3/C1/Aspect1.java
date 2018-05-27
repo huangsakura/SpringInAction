@@ -4,6 +4,7 @@ import com.huangjinlong.util.Dates;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
+import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 
 import java.util.Date;
 
@@ -60,5 +61,13 @@ public class Aspect1 {
 
         }
         System.out.println("退出方法的时间:"+ Dates.format(new Date(),Dates.CustomPattern.CUSTOM_TIME_PATTERN_2));
+    }
+
+    @Pointcut("execution(* com.huangjinlong.A4.B3.C1.Bean1.d(int)) && args(x)")
+    public void pointCut2(int x) {}
+
+    @Before("pointCut2(y)")
+    public void x(int y) {
+        System.out.println(y);
     }
 }

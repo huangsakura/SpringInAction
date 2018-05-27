@@ -18,5 +18,8 @@ public class Main {
         }
         System.out.println();
         bean1.c();
+
+        System.out.println();
+        bean1.d(1);
     }
 }
