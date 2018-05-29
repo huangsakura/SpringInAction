@@ -18,7 +18,7 @@ public class RootConfig extends WebMvcConfigurationSupport {
     @Override
     public ViewResolver mvcViewResolver() {
         InternalResourceViewResolver internalResourceViewResolver = new InternalResourceViewResolver();
-        internalResourceViewResolver.setPrefix("/WEB-INF/views/");
+        internalResourceViewResolver.setPrefix("/WEB-INF/views");
         internalResourceViewResolver.setSuffix(".jsp");
         internalResourceViewResolver.setExposeContextBeansAsAttributes(true);
         return internalResourceViewResolver;
