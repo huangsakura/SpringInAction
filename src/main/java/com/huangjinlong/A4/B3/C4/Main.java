@@ -9,6 +9,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class Main {
 
     public static void main(String[] a) {
+        //AnnotationConfigWebApplicationContext
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(Config.class);
 
         Performance performance = applicationContext.getBean(Performance.class);
